@@ -1,4 +1,4 @@
-package solid.srp.done;
+package solid.srp.end;
 
 import java.util.HashMap;
 import java.util.Map;

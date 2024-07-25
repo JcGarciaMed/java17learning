@@ -1,4 +1,4 @@
-package solid.srp.done;
+package solid.srp.end;
 
 //A separate class for handling persistence 
 public class UserPersistenceService {

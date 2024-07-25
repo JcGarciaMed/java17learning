@@ -1,4 +1,4 @@
-package solid.srp.done;
+package solid.srp.end;
 
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;

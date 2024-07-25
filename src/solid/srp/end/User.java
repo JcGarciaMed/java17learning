@@ -1,4 +1,4 @@
-package solid.srp.done;
+package solid.srp.end;
 
 //User
 public class User {
