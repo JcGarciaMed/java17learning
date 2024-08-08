@@ -8,9 +8,10 @@ import java.util.function.Predicate;
 public class PredicateClass {
     public static void main(String[] args) {
         List<Alumno> alumnos = Arrays.asList(
-                new Alumno(20, "Juan"),
-                new Alumno(18, "Carlos"),
-                new Alumno(10, "Pedro"));
+                new Alumno(20, "Juan", false),
+                new Alumno(18, "Carlos", false),
+                new Alumno(10, "Pedro", false),
+                new Alumno(9, "Diego", false));
 
         Predicate<Alumno> p1 = a-> a.getNota()>10;
         Predicate<Alumno> p2 = a-> a.getNombre().startsWith("J");
@@ -26,6 +27,24 @@ public class PredicateClass {
         BiPredicate<Alumno, Integer> bp1 = (a, i) -> a.getNota()+i > 11;
         System.out.println("    FILTRO 4    ");
         imprimirDetalle2(alumnos, bp1);
+
+        //METODOS
+
+        Predicate<Alumno> nota = a-> a.getNota()>11;
+        Predicate<Alumno> habilitacion = a->a.isHabilitado();
+
+        Predicate<Alumno> notaAndHabilitado = nota.and(habilitacion);
+        System.out.println("    FILTRO 5 AND   ");
+        imprimirDetalle(alumnos, notaAndHabilitado);
+
+        Predicate<Alumno> notaOrHabilitado = nota.or(habilitacion);
+        System.out.println("    FILTRO 6 OR   ");
+        imprimirDetalle(alumnos, notaOrHabilitado);
+
+        Predicate<Alumno> notaNotHabilitado = nota.or(habilitacion.negate());
+        System.out.println("    FILTRO 7 NEGATE   ");
+        imprimirDetalle(alumnos, notaOrHabilitado);
+
 
 
     }

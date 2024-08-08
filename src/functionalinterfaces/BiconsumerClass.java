@@ -15,5 +15,8 @@ public class BiconsumerClass {
         biConsumer.accept("cod2", "Carlos");
         biConsumer.accept("cod3", "Garcia");
         System.out.println(map2);
+
+        // BICONSUMER METHODS
+        
     }
 }
