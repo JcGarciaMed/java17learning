@@ -1,4 +1,4 @@
-package functionalintefaces;
+package functionalinterfaces;
 
 class Alumno{
     private int nota;

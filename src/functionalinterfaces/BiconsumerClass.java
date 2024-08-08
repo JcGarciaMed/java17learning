@@ -1,4 +1,4 @@
-package functionalintefaces;
+package functionalinterfaces;
 
 import java.util.HashMap;
 import java.util.Map;
